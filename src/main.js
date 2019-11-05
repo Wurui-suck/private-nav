@@ -72,4 +72,3 @@ document.addEventListener('keypress', (e) => {
 $(searchInput).on('keypress', (e) => {
     e.stopPropagation()
 })
-console.log(hashMap)
