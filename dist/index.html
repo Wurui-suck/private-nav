@@ -12,7 +12,7 @@
 <body>
     <header class="globalHeader">
         <form class="search" method="GET" action="https://www.baidu.com/s">
-            <input name="wd" type="text" value="使用百度搜索" onfocus="this.value=''" style="color: #999999" onblur="this.value='使用百度搜索'" id="searchInput">
+            <input name="wd" type="text" value="使用百度搜索" onfocus="this.value=''" style="color: #999999" onblur="if(this.value===''){ this.value='使用百度搜索'}" id="searchInput">
             <button type="submit">搜索</button>
         </form>
     </header>
