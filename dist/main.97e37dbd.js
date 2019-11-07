@@ -205,8 +205,21 @@ document.addEventListener('keypress', function (e) {
     }
   }
 });
-$(searchInput).on('keypress', function (e) {
+$('#searchInput').on('keypress', function (e) {
   e.stopPropagation();
 });
+$('#searchInput').on('focus', function () {
+  $('.word').css('display', 'none');
+});
+$('#searchInput').on('blur', function () {
+  if ($('#searchInput').val() === '') {
+    $('.word').css('display', 'block');
+  }
+});
+$('button').on('click', function () {
+  console.log('12');
+  $('#searchInput').val('');
+  $('.word').css('display', 'block');
+});
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.0a4a379e.js.map
+//# sourceMappingURL=main.97e37dbd.js.map

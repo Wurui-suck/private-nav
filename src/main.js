@@ -69,6 +69,19 @@ document.addEventListener('keypress', (e) => {
         }
     }
 })
-$(searchInput).on('keypress', (e) => {
+$('#searchInput').on('keypress', (e) => {
     e.stopPropagation()
+})
+$('#searchInput').on('focus', () => {
+    $('.word').css('display', 'none')
+})
+$('#searchInput').on('blur', () => {
+    if ($('#searchInput').val() === '') {
+        $('.word').css('display', 'block')
+    }
+})
+$('button').on('click', () => {
+    console.log('12')
+    $('#searchInput').val('')
+    $('.word').css('display', 'block')
 })

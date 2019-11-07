@@ -29,6 +29,7 @@ margin: 20px;
 }
 .search{
     display: flex;
+    position: relative;
 }
 @media(min-width:500px){
     .search{
@@ -36,6 +37,12 @@ margin: 20px;
         margin-left:auto;
         margin-right: auto;
     }
+}
+.word{
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    color: #999999
 }
 .globalHeader>.search>input{
     width: 100%;
@@ -145,4 +152,4 @@ border-radius: 4px;
 }
 
 
-/*# sourceMappingURL=style.b66c9235.css.map */
+/*# sourceMappingURL=style.067e9b54.css.map */
