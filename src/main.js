@@ -81,7 +81,8 @@ $('#searchInput').on('blur', () => {
     }
 })
 $('button').on('click', () => {
-    console.log('12')
-    $('#searchInput').val('')
-    $('.word').css('display', 'block')
+    setTimeout(() => {
+        $('#searchInput').val('')
+        $('.word').css('display', 'block')
+    });
 })

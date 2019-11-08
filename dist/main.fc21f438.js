@@ -217,9 +217,10 @@ $('#searchInput').on('blur', function () {
   }
 });
 $('button').on('click', function () {
-  console.log('12');
-  $('#searchInput').val('');
-  $('.word').css('display', 'block');
+  setTimeout(function () {
+    $('#searchInput').val('');
+    $('.word').css('display', 'block');
+  });
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.97e37dbd.js.map
+//# sourceMappingURL=main.fc21f438.js.map
