@@ -77,16 +77,17 @@ $('#searchInput').on('keypress', (e) => {
     e.stopPropagation()
 })
 $('#searchInput').on('focus', () => {
-    $('.word').css('display', 'none')
+    if ($('#searchInput').val() === '使用百度搜索') {
+        $('#searchInput').val('').css('color', 'black')
+    }
 })
 $('#searchInput').on('blur', () => {
     if ($('#searchInput').val() === '') {
-        $('.word').css('display', 'block')
+        $('#searchInput').val('使用百度搜索').css('color', 'grey')
     }
 })
-$('button').on('click', () => {
-    setTimeout(() => {
+$('form').on('submit', () => {
+    if ($('#searchInput').val() === '使用百度搜索') {
         $('#searchInput').val('')
-        $('.word').css('display', 'block')
-    });
+    }
 })

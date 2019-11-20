@@ -52,6 +52,10 @@ margin: 20px;
     border-radius: 4px;
     padding: 0 10px;
 }
+.globalHeader>.search>button:hover{
+    box-shadow: 0px 0px 10px 3px #999;
+    cursor: pointer; 
+}
 .globalHeader>.search>button{
     white-space: nowrap;
     padding: 0 28px;
@@ -65,7 +69,12 @@ margin: 20px;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
-    min-width: 925px;
+    
+  }
+  @media (min-width: 500px){
+      .globalMain{
+        min-width: 925px;
+      }
   }
 .siteList{
     display: flex;
@@ -93,8 +102,8 @@ margin-bottom: 10px;
     position: relative;
     display: flex;
     flex-direction: column;
-border:1px #ddd solid;
-border-radius: 4px;
+    border:1px #ddd solid;
+    border-radius: 4px;
     width: 160px;
     display: flex;
     align-items: center;
@@ -122,11 +131,16 @@ border-radius: 4px;
 }
 .siteList .addButton{
     width: 160px;
+   
     
 }
 .siteList .addButton .icon{
     height: 64px;
-    width: 64px;
+    width: 64px;   
+}
+.siteList .addButton:hover{
+    box-shadow: 0px 0px 10px 3px #fefefe;
+    cursor: pointer; 
 }
 .siteList .addButton .icon-wrapper{
     display: flex;

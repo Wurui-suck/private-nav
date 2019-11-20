@@ -215,18 +215,19 @@ $('#searchInput').on('keypress', function (e) {
   e.stopPropagation();
 });
 $('#searchInput').on('focus', function () {
-  $('.word').css('display', 'none');
+  if ($('#searchInput').val() === '使用百度搜索') {
+    $('#searchInput').val('').css('color', 'black');
+  }
 });
 $('#searchInput').on('blur', function () {
   if ($('#searchInput').val() === '') {
-    $('.word').css('display', 'block');
+    $('#searchInput').val('使用百度搜索').css('color', 'grey');
   }
 });
-$('button').on('click', function () {
-  setTimeout(function () {
+$('form').on('submit', function () {
+  if ($('#searchInput').val() === '使用百度搜索') {
     $('#searchInput').val('');
-    $('.word').css('display', 'block');
-  });
+  }
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.fc2ae6d6.js.map
+//# sourceMappingURL=main.ba28c4a4.js.map
