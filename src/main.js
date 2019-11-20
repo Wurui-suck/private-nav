@@ -36,6 +36,10 @@ render = () => {
         $li.on('click', () => {
             window.open(node.url, '_self')
         })
+        $li.find('img').on('error', () => {
+            $li.find('img').css({ display: 'none' })
+            $li.find('.logo').html(`${node.logo}`)
+        })
         $li.on('click', '.close', (e) => {
             e.stopPropagation()
             hashMap.splice(index, 1)

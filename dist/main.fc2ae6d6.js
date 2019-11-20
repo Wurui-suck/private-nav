@@ -167,6 +167,12 @@ render = function (_render) {
     $li.on('click', function () {
       window.open(node.url, '_self');
     });
+    $li.find('img').on('error', function () {
+      $li.find('img').css({
+        display: 'none'
+      });
+      $li.find('.logo').html("".concat(node.logo));
+    });
     $li.on('click', '.close', function (e) {
       e.stopPropagation();
       hashMap.splice(index, 1);
@@ -223,4 +229,4 @@ $('button').on('click', function () {
   });
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.1decbb7a.js.map
+//# sourceMappingURL=main.fc2ae6d6.js.map
