@@ -163,7 +163,7 @@ render = function (_render) {
 }(function () {
   $('.siteList').find('li:not(.lastLi)').remove();
   hashMap.forEach(function (node, index) {
-    var $li = $("\n           <li>\n             <div class=\"site-wrapper\">\n                <div class=\"logo\">".concat(node.logo, "</div>\n                <div class=\"link\">").concat(simplifyUrl(node.link), "</div>\n                <div class=\"close\"> \n                  <div class=\"icon-wrapper\">\n                    <svg class=\"icon delete\">\n                      <use xlink:href=\"#icon-shanchu\"></use>\n                    </svg>\n                   </div>\n                </div>\n            </div>    \n           </li>\n        ")).insertBefore($('.siteList').find('.lastLi'));
+    var $li = $("\n           <li>\n             <div class=\"site-wrapper\">\n                <div class=\"logo\"><img width=32 src='https://".concat(simplifyUrl(node.link), "/favicon.ico' alt=\"").concat(node.logo, "\"></div>\n                <div class=\"link\">").concat(simplifyUrl(node.link), "</div>\n                <div class=\"close\"> \n                  <div class=\"icon-wrapper\">\n                    <svg class=\"icon delete\">\n                      <use xlink:href=\"#icon-shanchu\"></use>\n                    </svg>\n                   </div>\n                </div>\n            </div>    \n           </li>\n        ")).insertBefore($('.siteList').find('.lastLi'));
     $li.on('click', function () {
       window.open(node.url, '_self');
     });
@@ -223,4 +223,4 @@ $('button').on('click', function () {
   });
 });
 },{}]},{},["epB2"], null)
-//# sourceMappingURL=main.fc21f438.js.map
+//# sourceMappingURL=main.1decbb7a.js.map

@@ -20,7 +20,7 @@ render = () => {
         const $li = $(`
            <li>
              <div class="site-wrapper">
-                <div class="logo">${node.logo}</div>
+                <div class="logo"><img width=32 src='https://${simplifyUrl(node.link)}/favicon.ico' alt="${node.logo}"></div>
                 <div class="link">${simplifyUrl(node.link)}</div>
                 <div class="close"> 
                   <div class="icon-wrapper">
